@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Overlook</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="booking-section">
+        <h1>Reserva de quarto</h1>
+        <h3>Informe os dados:</h3>
+        <div id="banner">
+            <form oninput="estPrice.value=parseInt(nights.value*250)+parseInt(extraGuests.value*50)">
+                <fieldset>                
+                    <label for="nights">Quantidade de diárias: </label><input type="number" id="nights" name="nights" value="1" min="1"><br>
+                    <label for="extraGuests">Quantidade de hóspedes extra: </label>0<input type="range" id="extraGuests" name="extraGuests" value="0" min="0" max="4">4<br><br>
+                    <label for="estPrice">Valor estimado: R$ </label><output name="estPrice" for="nights extraGuests">250</output>
+                </fieldset>
+                <input type="submit" value="Reservar">
+                <input type="reset" value="Limpar tudo">  
+            </form>        
+        </div>
+    </div>
+    <br>
+    <a href="index.html"><button class="back">Voltar</button></a>
+</body>
+</html>

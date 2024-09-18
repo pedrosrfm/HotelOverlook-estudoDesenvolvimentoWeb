@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <title>Hotel Overlook</title>
+</head>
+<body background="img/background.jpg">
+    <img src="img/logo.jpeg" width="500" height="300">
+    <h1>Cadastro de novo hóspede</h1>
+    <h3>Informe os dados do novo hóspede</h3>    
+    <div id="formulario">
+        <form oninput="valorEstimado.value=parseInt(diarias.value*250)+parseInt(hospedes.value*50)">
+            <fieldset>
+                <label>Nome:</label><input type=text required><br>
+                <label>Password:</label><input type=password required><br>
+                <label>Sexo:</label><br><input type=radio id=fem name=sexo>Feminino<br>
+                <input type=radio id=masc name=sexo>Masculino<br>
+                <input type=radio id=outro name=sexo>Outro<br>
+                <label>Quantidade de diárias:</label><input type=number id=diarias required value="1"><br>
+                <label>Quantidade de hóspedes extra:</label>0<input type=range id=hospedes min=0 max=4 value="0">4<br>
+                <label>Valor estimado: R$ </label><output name=valorEstimado for=diarias hospedes>250</output>
+            </fieldset>
+            <input type="submit">
+            <input type="reset">
+        </form>
+    </div>
+</body>
+</html>
